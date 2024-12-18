@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My Watchlist - ToonStream</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- JQUERY AND JS-COOKIE -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+
+</head>
+<body>
+  <header>
+    <div class="header-wrapper">
+      <a href="#"><img src="images/logo.svg" alt="logo" class="logo"></a>
+      <nav class="nav-bar" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="homepage.html" id="home">Home</a></li>
+          <li><a href="watchlist.html" id="watchlist">Watchlist</a></li>
+          <li><a href="#" id="tv">TV</a></li>
+          <li><a href="#" id="movies">Movies</a></li>
+        </ul>
+      </nav>
+      <div class="nav-buttons">
+        <button id="search-btn" href="search.html"><img src="images/search-btn.svg" alt="search button"></button>
+        <button id="user-btn" href="profile.html"><img src="images/user-btn.png" alt="user button"></button>
+      </div>
+    </div>
+    </div>
+    <section class="watchlist-header">
+        <h2>My Watchlist</h2>
+    </section>
+  </header>
+  <main>
+    <section class="watchlist-content">
+      <div class="watchlist-container">
+      </div>
+    </section>
+  </main>
+  <footer>
+    <p>ToonStream is an Atlas School project and the source code can be found <a href="https://github.com/kelciatkinson/final_project">here</a>.</p>
+  </footer>
+  <script src="watchlist.js"></script>
+</body>
+</html>

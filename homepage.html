@@ -1,40 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <title>ToonStream</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
-  <title>Final Project</title>
-  <script>
-
-  </script>
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- JQUERY AND JS-COOKIE -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.min.js"></script>
+  <!-- SWIPER -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
   <header>
-    <h1>Header</h1>
-    <div>
-      <h2>Header Content</h2>
-    </div>
-  </header>
-  <main>
-    <section>
-      <h2>Main</h2>
-      <div>
-        <h3>Main Content</h3>
+    <div class="header-wrapper">
+      <a href="#"><img src="images/logo.svg" alt="logo" class="logo"></a>
+      <nav class="nav-bar" role="navigation" aria-label="Main navigation">
+        <ul>
+          <li><a href="homepage.html" id="home">Home</a></li>
+          <li><a href="watchlist.html" id="watchlist">Watchlist</a></li>
+          <li><a href="#" id="tv">TV</a></li>
+          <li><a href="#" id="movies">Movies</a></li>
+        </ul>
+      </nav>
+      <div class="nav-buttons">
+        <button id="search-btn" href="search.html"><img src="images/search-btn.svg" alt="search button"></button>
+        <button id="user-btn" href="profile.html"><img src="images/user-btn.png" alt="user button"></button>
       </div>
-      <div>
-        <p>Another div</p>
+    </div>
+    <!-- <section class="hero-section" aria-labelledby="hero-section-heading">
+      <div class="swiper hero-swiper" role="region" aria-label="Featured content slider">
+        <div class="swiper-wrapper">
+        </div>
+        <button class="swiper-button-prev" aria-label="Previous slide"></button>
+        <button class="swiper-button-next" aria-label="Next slide"></button>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section> -->
+    
+  </header>
+  <main role="main">
+    <section class="newMovies" aria-labelledby="new-movies-heading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="new-movies-heading">New & Upcoming Movies</h2>
+        </div>
+        <div class="loader"></div>
+        <div class="swiper videoCarousel newMovies">
+          <div class="swiper-wrapper"></div>
+          <button class="swiper-button-prev" aria-label="Previous slide"></button>
+          <button class="swiper-button-next" aria-label="Next slide"></button>
+        </div>
       </div>
     </section>
-      <div>
-        <p>Here's a div</p>
+    <section class="action" aria-labelledby="action-movies-heading">
+      <div class="container">
+        <div class="section-header" aria-labelledby="action-movies-heading">
+          <h2>Action</h2>
+        </div>
+        <div class="loader"></div>
+        <div class="swiper videoCarousel newTv">
+          <div class="swiper-wrapper"></div>
+          <button class="swiper-button-prev" aria-label="Previous slide"></button>
+          <button class="swiper-button-next" aria-label="Next slide"></button>
+        </div>
       </div>
-      <div>
-        <p>One more</p>
+    </section>
+    <section class="family" aria-labelledby="family-movies-heading">
+      <div class="container">
+        <div class="section-header" aria-labelledby="family-movies-heading">
+          <h2>Family Favorites</h2>
+        </div>
+        <div class="loader"></div>
+        <div class="swiper videoCarousel newTv">
+          <div class="swiper-wrapper"></div>
+          <button class="swiper-button-prev" aria-label="Previous slide"></button>
+          <button class="swiper-button-next" aria-label="Next slide"></button>
+        </div>
       </div>
-    <section
+    </section>
+    <section class="newTv" aria-labelledby="new-tv-heading">
+      <div class="container">
+        <div class="section-header" aria-labelledby="new-tv-heading">
+          <h2>New TV for You</h2>
+        </div>
+        <div class="loader"></div>
+        <div class="swiper videoCarousel newTv">
+          <div class="swiper-wrapper"></div>
+          <button class="swiper-button-prev" aria-label="Previous slide"></button>
+          <button class="swiper-button-next" aria-label="Next slide"></button>
+        </div>
+      </div>
+    </section>
   </main>
   <footer>
+    <p>ToonStream is an Atlas School project and the source code can be found <a href="https://github.com/kelciatkinson/final_project">here</a>.</p>
   </footer>
+  <script src="script.js"></script>
+  <script src="watchlist.js"></script>
 </body>
 </html>

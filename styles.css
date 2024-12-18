@@ -1,3 +1,568 @@
+:root {
+  /* Colors */
+  --light-white: #FFFBF8;
+  --dark-purple: #290B47;
+  --medium-purple: #3E2359;
+  --orange: #FC8C30;
+
+  /* Font Sizes */
+  --font-xl: 36px;
+  --font-large: 24px;
+  --font-medium: 20px;
+  --font-regular: 16px;
+  --font-small: 14px;
+}
+
+* {
+  background-color: var(--dark-purple);
+  color: var(--light-white);
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: 0px solid;
+  padding: 10px;
+}
+
+/* Header Styling */
 header {
-  background-color: brown;
+  background-image: url('images/');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.header-wrapper {
+  max-width: 1280px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+/****** NAVIGATION ******/
+nav {
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: var(--font-medium);
+  font-style: bold;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+}
+
+.nav-bar ul {
+  gap: 15px;
+  list-style: none;
+  display: flex;
+}
+
+.nav-bar ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+  padding: 10px;
+  opacity: 80%;
+}
+
+.nav-bar ul li a:hover {
+  border-radius: 10px;
+  padding: 10px;
+  transition: opacity 0.3s ease;
+  background-color: var(--medium-purple);
+  opacity: 100%;
+}
+
+.nav-bar ul li a:active {
+  opacity: 50%;
+}
+
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-buttons button {
+  border: medium none;
+  padding-left: 15px;
+}
+
+#search-btn img {
+  width: 35px;
+  padding: 10px;
+  height: 35px;
+  opacity: 80%;
+}
+
+#search-btn img:hover {
+  opacity: 100%;
+  border-radius: 10px;
+  background-color: var(--medium-purple);
+  padding: 10px;
+}
+
+#search-btn img:active {
+  opacity: 50%;
+}
+
+#user-btn img {
+  opacity: 80%;
+  height: 44px;
+  width: 44px;
+  padding: 6px;
+}
+
+#user-btn img:hover {
+  opacity: 100%;
+  padding: 6px;
+  border-radius: 10px;
+  background-color: var(--medium-purple);
+}
+
+#user-btn img:active {
+  opacity: 50%;
+}
+
+.nav-buttons button img:hover {
+  opacity: 100%;
+  transition: opacity .3s ease;
+}
+
+/* HERO SECTION */
+
+
+.hero-img {
+  width: 100%;
+  height: auto;
+}
+
+.hero-container {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+/* Card */
+.container {
+  max-width: 90%;
+  margin: auto;
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 200px;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card-img-overlay {
+  background: transparent;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.play-overlay {
+  cursor: pointer;
+  background: transparent;
+  height: 44px;
+  transition: transform 0.3s ease;
+  transform: scale(0.9);
+}
+
+.card-body {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  padding: 15px;
+  background: transparent;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.card-title {
+  background: transparent;
+  font-size: var(--font-small);
+  font-weight: bold;
+  margin-bottom: 8px;
+  font-size: var(--font-small);
+  overflow: hidden;
+}
+
+.card:hover .card-body {
+  transform: translateY(0);
+}
+.card:hover .card-img-top {
+  transform: scale(1.15);
+  opacity: 50%;
+}
+
+.card:hover .card-img-overlay {
+  opacity: 1;
+}
+
+.card:hover .play-overlay {
+  transform: scale(1);
+}
+
+/* Swiper */
+
+.swiper {
+  width: 600px;
+  height: 300px;
+}
+
+.swiper-container {
+  padding: 20px 0;
+  width: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: 50%;
+  width: 40px;
+  height: 40px;
+  background: transparent;
+}
+
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 24px;
+  color: var(--light-white);
+}
+
+.swiper {
+  width: 100%;
+  overflow: visible;
+}
+
+.card {
+  width: 100%;
+  max-width: 200px;
+}
+
+footer {
+  margin: 50px 0 0 0;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--medium-purple);
+}
+
+footer p, footer a {
+  background-color: var(--medium-purple);
+}
+
+/* Watchlist Button */
+
+.watchlist-btn, .watchlist-btn span {
+  background-color: var(--orange);
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: large;
+}
+
+.watchlist-btn:hover, .watchlist-btn span:hover {
+  background-color: var(--orange);
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: large;
+  cursor: pointer;
+}
+
+/* Watchlist Page */
+.watchlist-header {
+  min-height: 30vh;
+}
+
+.watchlist-header {
+  width: 90%;
+  margin: auto;
+}
+
+.watchlist-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 1000px;
+  padding-top: 20px;
+  position: relative;
+  height: 100%;
+  margin-left: 10%;
+  margin-top: 20px;
+}
+
+.watchlist-item-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-left: 0;
+  padding-right: 10%;
+}
+
+.watchlist-item-details p {
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.watchlist-item-details div {
+  display: flex;
+  flex-direction: row;
+}
+
+.remove-from-watchlist {
+  background-color: var(--orange);
+  color: var(--light-white);
+  border-radius: 5px;
+  cursor: pointer;
+  height: 44px;
+}
+
+.remove-from-watchlist:hover {
+  opacity: 80%;
+}
+
+.watchlist-img {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.watchlist-img-overlay {
+  width: 40%;
+  height: 40%;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.watchlist-img-overlay {
+  opacity: 1;
+  height: 44px;
+  width: auto;
+  opacity: 0;
+}
+
+.watchlist-img-overlay:hover {
+  opacity: 0;
+}
+
+.watchlist-play-overlay {
+  cursor: pointer;
+  background: transparent;
+  height: 44px;
+  transition: transform 0.3s ease;
+  transform: scale(0.9);
+  opacity: 1;
+}
+
+.card-text {
+  display: none;
+}
+
+/* Responsive section */
+@media screen and (max-width: 1024px) {
+  .card {
+    max-width: 180px;
+  }
+
+  .watchlist-item-details {
+    height: auto;
+    padding-left: 0;
+    padding-right: 10%;
+  }
+
+  .watchlist-item-details p {
+    max-height: 200px;
+    overflow-y: scroll;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    max-width: 160px;
+  }
+  .watchlist-item-details {
+    font-size: var(--font-small);
+    padding-left: 0;
+    padding-right: 10%;
+  }
+
+  .watchlist-item-details p {
+    max-height: 200px;
+    overflow-y: scroll;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    max-width: 140px;
+  }
+  
+  .watchlist-item-details {
+    font-size: 10px;
+    padding-left: 0;
+    padding-right: 10%;
+  }
+  .card-img-top {
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .card-img-overlay {
+    width: 80%;
+    height: 80%;
+    background: transparent;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .watchlist-item-details {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 0px;
+    font-size: 8px;
+    padding-left: 0;
+    padding-right: 10%;
+  }
+
+  .watchlist-item-details h3 {
+    font-size: var(--small);
+  }
+
+  .watchlist-item-details div {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .watchlist-item-details p {
+    max-height: 200px;
+    overflow-y: scroll;
+  }
+
+  .remove-from-watchlist {
+    height: 44px;
+    width: 80%;
+    margin: auto;
+    font-size: var(--font-small);
+    margin-top: 10px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .card {
+    max-width: 120px;
+  }
+
+  .card-img-top {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    margin: 0%;
+  }
+
+  .card-img-overlay {
+    width: 80%;
+    height: 80%;
+    background: transparent;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .watchlist-item-details {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 0px;
+    font-size: 8px;
+    padding-left: 0;
+    padding-right: 10%;
+  }
+
+  .watchlist-item-details p {
+    max-height: 200px;
+    overflow-y: scroll;
+  }
+
+  .watchlist-item-details h3 {
+    font-size: var(--small);
+  }
+
+  .watchlist-item-details div {
+    display: flex;
+    flex-direction: row;
+  }
+  .remove-from-watchlist {
+    height: 44px;
+    width: 80%;
+    margin: auto;
+    font-size: var(--font-small);
+    margin-top: 10px;
+  }
 }
